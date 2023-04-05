@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixer</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+	<div class='white-wrapper'>
+		<h1>COLOR MIXER</h1>
+		<p class="prompt">To mix two colors, enter the color numbers in each input field in the HEX format (without #) and click the <span class='blue-name-button-in-p'>"MIX"</span> button. You can use the suggested options. To repeat, press the <span class='blue-name-button-in-p'>"RESET"</span> button.</p>
+		<div class="color-inputs">
+			<input type="text" id="color1" class="color-input" placeholder="First color" list="a">
+			<datalist id="a">
+				<option value="3590B0"></option>
+				<option value="E3CCAF"></option>
+				<option value="FC3415"></option>
+				<option value="54CA20"></option>
+				<option value="6DC2B0"></option>
+			</datalist>
+			<input type="text" id="color2" class="color-input" placeholder="Second color" list="b">
+			<datalist id="b">
+				<option value="B96F7F"></option>
+				<option value="F0E10E"></option>
+				<option value="114C4D"></option>
+				<option value="FDB216"></option>
+				<option value="E31919"></option>
+			</datalist>
+		</div>
+
+		<div class="color-button">
+			<button class='button-mix' onclick="mixColors()">MIX</button>
+			<button class='button-reset' onclick="resetColors()">RESET</button>
+		</div>
+		<div class="color-circles">
+			<div id="first-color"><span id="first-color-code"></span></div>
+			<div id="mixed-color"><span id="color-code"></span></div>
+			<div id="second-color"><span id="second-color-code"></span></div>
+		</div>
+
+	</div>
+    <!-- <img id="mixer" src="mixer.png" alt="mixer picture"> -->
+</body>
+</html>
+
